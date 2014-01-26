@@ -43,6 +43,9 @@ html {
       -ms-text-size-adjust: 100%;
 }
 
+body {
+  margin: 0;
+}
 
 a {
   background: transparent;
@@ -304,7 +307,7 @@ body {
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
-  background-color: #;
+  background-color: #ffffff;
 }
 
 input,
@@ -349,7 +352,7 @@ img {
 
 .img-thumbnail {
   display: inline-block;
-  height:auto;
+  height: auto;
   max-width: 100%;
   padding: 4px;
   line-height: 1.428571429;
@@ -783,19 +786,16 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  
 }
 
 .container:before,
 .container:after {
   display: table;
   content: " ";
-  
 }
 
 .container:after {
   clear: both;
-  
 }
 
 .container:before,
@@ -865,7 +865,7 @@ pre code {
 .col-lg-3,
 .col-xs-4,
 .col-sm-4,
-.col-md-4,.col-md-4-gray,
+.col-md-4,
 .col-lg-4,
 .col-xs-5,
 .col-sm-5,
@@ -1298,7 +1298,7 @@ pre code {
   .col-md-1,
   .col-md-2,
   .col-md-3,
-  .col-md-4,.col-md-4-gray,
+  .col-md-4,
   .col-md-5,
   .col-md-6,
   .col-md-7,
@@ -1333,13 +1333,8 @@ pre code {
   .col-md-5 {
     width: 41.66666666666667%;
   }
-  .col-md-4, .col-md-4-gray{
-    width: 31%;
-	background-color: #F93;
-	margin: 5px;
-  }
-  .col-md-4-gray {
-	  background-color: #666;
+  .col-md-4 {
+    width: 33.33333333333333%;
   }
   .col-md-3 {
     width: 25%;
@@ -4329,8 +4324,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
-  background-color: #666;
-
 }
 
 .navbar:before,
@@ -4446,7 +4439,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .container > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px;
-  
 }
 
 @media (min-width: 768px) {
@@ -4454,14 +4446,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
   .container > .navbar-collapse {
     margin-right: 0;
     margin-left: 0;
-	
   }
 }
 
 .navbar-static-top {
   z-index: 1000;
   border-width: 0 0 1px;
-  
 }
 
 @media (min-width: 768px) {
@@ -4476,7 +4466,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
   right: 0;
   left: 0;
   z-index: 1030;
-  
 }
 
 @media (min-width: 768px) {
@@ -4502,7 +4491,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
-  
 }
 
 .navbar-brand:hover,
@@ -4589,7 +4577,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   }
   .navbar-nav > li > a {
     padding-top: 15px;
-    padding-bottom: 0px;
+    padding-bottom: 15px;
   }
   .navbar-nav.navbar-right:last-child {
     margin-right: -15px;
@@ -4714,12 +4702,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default {
-  border-color: #000;
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
 }
 
 .navbar-default .navbar-brand {
-  font-weight: bold;
-  color: #F90;
+  color: #777777;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -4733,7 +4721,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #F90;
+  color: #777777;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -5214,7 +5202,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   position: relative;
   top: -1px;
 }
-b
+
 a.badge:hover,
 a.badge:focus {
   color: #ffffff;
@@ -5232,23 +5220,14 @@ a.list-group-item.active > .badge,
   margin-left: 3px;
 }
 
-.jumbotron,
-.jumbotron-new {
+.jumbotron {
   padding: 30px;
   margin-bottom: 30px;
   font-size: 21px;
   font-weight: 200;
   line-height: 2.1428571435;
-  height: 500px;
+  color: inherit;
   background-color: #eeeeee;
-}
-
-.jumbotron-new {
-  background-image: url(../../images/new-daily-bg.jpg);
-  background-size: cover;
-    
-  color: #FFFFFF;
-  text-shadow: 0px 0px 2px #333;
 }
 
 .jumbotron h1,
@@ -7136,37 +7115,4 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
-}
-#myinput{
-	overflow: hidden;
-	white-space: nowrap;
-}
-
-#myform{
-	width: 50%;
-	padding-left: 6px;
-}
-#iwant{
-	width:150px;
-}
-#everyday{
-	width: 200px;
-}
-
-#makeit-searchform {
-	width:1000px;
-	padding: 0px;
-	margin: 0px;
-	overflow: hidden;
-	white-space: nowrap;
-}
-	
-#makeit-searchfield
-{
-	width:300px;
-}
-
-
-body {
-  margin: 0;
 }
