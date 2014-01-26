@@ -69,10 +69,10 @@
                   <hr class="colorgraph">
                   <div class="row">
                     <div class="col-xs-6 col-sm-6 col-md-6">
-                      <input type="submit" class="btn btn-lg btn-success btn-block" value="Sign In">
+                      <input type="submit" id="signIn" class="btn btn-lg btn-success btn-block" value="Sign In">
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6">
-                      <a href="" class="btn btn-lg btn-primary btn-block">Register</a>
+                      <a href="" id="register" class="btn btn-lg btn-primary btn-block">Register</a>
                     </div>
                   </div>
                 </fieldset>
@@ -81,8 +81,8 @@
           </div>
 
         </div><!-- /.container -->
-
-        <script type='text/javascript'>
+        <script type="text/javascript" src="global.js"></script>
+      <script type='text/javascript'>
         $(function(){
           $('.button-checkbox').each(function(){
             var $widget = $(this),
@@ -141,14 +141,43 @@
     init();
   });
 });
-
+    function signIn(){
+      var signInButton = document.querySelectorAll('#signIn')[0];
+      signInButton.click(function(){
+        $ajax({
+          url: '/login',
+          method: 'POST',
+        })
+          .success(function(response){
+            if (CryptoJS.MD5($('.password').text()) == response){
+              writeCookie('DDAuth', $('#email').text(), 10);
+              window.href = '/site/landing.html';
+            }
+          });
+      });
+    }
+    function register(){
+      var registerButton = document.querySelectorAll('#register')[0];
+      registerButton.click(function(){
+        $ajax({
+          url: '/register',
+          method: 'POST',
+          data: { pass: CryptoJS.MD5($('.password').text(),
+                  email: $('#email').text()
+                }
+        })
+          .success(function(response){
+            if (response > 0)
+              writeCookie('DDAuth', $('#email').text(), 10);
+              window.href = '/site/landing.html';
+            }
+          });
+      }
 </script>
 
 <script type='text/javascript' src="dist/js/jquery.min.js"></script>
-
+<script src="http://crypto-js.googlecode.com/svn/tags/3.0.2/build/rollups/md5.js"></script>
 <script type='text/javascript' src="dist/js/bootstrap.min.js"></script>
-
-<script type='text/javascript'>
 
 $(document).ready(function() {
 
