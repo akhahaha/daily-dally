@@ -28,7 +28,7 @@
         </div> -->
         
 
-        <div class="navbar navbar-inverse navbar-fixed-top" id="myNavbar">
+        <div class="navbar navbar-inverse navbar-static-top" id="myNavbar">
           <div class="container center-block">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -39,18 +39,218 @@
               <strong><a class="navbar-brand" id="myBrand" href="landing.html">Daily Dallys</a></strong>
             </div>
             <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Select Activity <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Running</a></li>
+                    <li><a href="#">Feed the Dog</a></li>
+                    <li><a href="#">Studying</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Manage Activities</a></li>
+                  </ul>
+                </li>
+                <li class="divider"></li>
+                <!-- <li ><a href="#">New Entry</a></li> -->
+                <li><a  data-toggle="modal" data-target="#myModal" href="#">
+                  Add Log Entry
+                </a></li>
+                <li class="divider"></li>
+                <li><a  data-toggle="modal" data-target="#myModal2" href="#">
+                  New Activity
+                </a></li>
+
+              </ul>
               <ul class="nav navbar-nav pull-right">
 
-                <li  class="pull-right"><a href="#Login">Login</a></li>
+                <li  class="pull-right"><a href="login.html">Login</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div>
         </div>
 
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Add Log Entry</h4>
+              </div>
+              <div class="modal-body ">
+                 <div class="container">
+                  <div class="row">
+                    <div class="span12">
+                      <table class="table-condensed table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th colspan="7">
+                              <span class="btn-group">
+                                <a class="btn"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                                <a class="btn active">February 2012</a>
+                                <a class="btn"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                              </span>
+                            </th>
+                          </tr>
+                          <tr>
+                            <th>Su</th>
+                            <th>Mo</th>
+                            <th>Tu</th>
+                            <th>We</th>
+                            <th>Th</th>
+                            <th>Fr</th>
+                            <th>Sa</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="muted">29</td>
+                            <td class="muted">30</td>
+                            <td class="muted">31</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                          </tr>
+                          <tr>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                          </tr>
+                          <tr>
+                            <td>19</td>
+                            <td class="btn-primary"><strong>20</strong></td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                          </tr>
+                          <tr>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td class="muted">1</td>
+                            <td class="muted">2</td>
+                            <td class="muted">3</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="container center-aligned ">
+                  <div class="row input-group-lg">
+                    <form>
+                      <fieldset>
+                        <input type="text" id="time" name="time" class=" input-group-lg" placeholder="Time">
+                        <br><br>
+                        <input type="text" id="distance" name="distance" class="input-block-level" placeholder="Distance">
+                        <br><br>
+                        <select id="difficulty" class="span3" name="Dificulty">
+                          <option selected value="na">
+                            How hard was it?
+                          </option>
 
-        <div class="container text-center" id="myText">
+                          <option value="Hard">
+                            Hard
+                          </option>
 
-          <label><input type="checkbox"> Sort values</label>
+                          <option value="Regular">
+                            Regular
+                          </option>
+
+                          <option value="Easy">
+                            Easy
+                          </option>
+                        </select>
+                        <br><br>
+                        <textarea rows="3" id="Comments" name="Comments" class="input-block-level" placeholder="Comments"></textarea>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+
+                
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Add new activity</h4>
+              </div>
+              <div class="modal-body">
+                <div class="container center-aligned ">
+                  <div class="row input-group-lg">
+                    <form>
+                      <fieldset>
+                        <input type="text" id="time" name="time" class=" input-group-lg" placeholder="Name">
+                        <br><br>
+                        <input type="text" id="distance" name="distance" class="input-block-level" placeholder="Category">
+                        <br><br>
+                        <select id="difficulty" class="span3" name="Dificulty">
+                          <option selected value="na">
+                            How often are you going to do it?
+                          </option>
+
+                          <option value="Daily">
+                            Daily
+                          </option>
+
+                          <option value="Weekly">
+                            Weekly
+                          </option>
+
+                          <option value="Monthly">
+                            Monthly
+                          </option>
+                        </select>
+                        <br><br>
+                        <textarea rows="3" id="Comments" name="Comments" class="input-block-level" placeholder="Comments"></textarea>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        <div class="container text-center" id="myContent">
+
+          <label><input type="checkbox" id="sorting"> Sort values</label>
+
+          <script>
+          document.getElementById("sorting").checked = false;
+          </script>
           <script src="dist/js/d3.min.js"></script>
           <script src="dist/js/d3tip.js"></script>
           <script>
@@ -83,7 +283,7 @@
             return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
           })
 
-          var svg = d3.select("body").append("svg")
+          var svg = d3.select("body").append("mysvg").append("svg")
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
           .append("g")
@@ -123,7 +323,7 @@
             d3.select("input").on("change", change);
 
             var sortTimeout = setTimeout(function() {
-              d3.select("input").property("checked", true).each(change);
+              // d3.select("input").property("checked", true).each(change);
             }, 2000);
 
             function change() {
@@ -159,6 +359,105 @@ function type(d) {
 
 </div><!-- /.container -->
 
+<div id="myTimeline">
+  <div class="container">
+    <div class="page-header">
+      <h1 id="timeline">Timeline</h1>
+    </div>
+    <ul class="timeline">
+      <li>
+        <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p>
+          </div>
+          <div class="timeline-body">
+            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+          </div>
+        </div>
+      </li>
+      <li class="timeline-inverted">
+        <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+          </div>
+          <div class="timeline-body">
+            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+            <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+          </div>
+          <div class="timeline-body">
+            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+          </div>
+        </div>
+      </li>
+      <li class="timeline-inverted">
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+          </div>
+          <div class="timeline-body">
+            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+          </div>
+          <div class="timeline-body">
+            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+            <hr>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+          </div>
+          <div class="timeline-body">
+            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+          </div>
+        </div>
+      </li>
+      <li class="timeline-inverted">
+        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+          </div>
+          <div class="timeline-body">
+            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
 
 
 <script type='text/javascript' src="dist/js/jquery.min.js"></script>
@@ -181,8 +480,8 @@ $(document).ready(function() {
 </body>
 
 <footer>
-  <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-    <p class="text-center" ><a id="myLink" href="http://hacktech.io">Developed in HackTech 2014</a></p>
+  <nav class="navbar navbar-default navbar-static-bottom" id="myfooter" role="navigation">
+    <p class="text-center" ><a id="myLink1" href="http://hacktech.io">Developed in HackTech 2014</a></p>
   </nav>
 
 </footer>
