@@ -56,9 +56,7 @@ body {height:100%; overflow-y:visible;}
 }
 
 
-.navbar-static-bottom{
-	position:fixed;
-    bottom:0;
+.navbar-fixed-bottom{
 	background-color : transparent;
 	border-color: transparent;
 }

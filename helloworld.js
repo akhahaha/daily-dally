@@ -16,7 +16,7 @@ app.get('/removeAllShit', api.removeAllUsers);
 app.get('/upload/:username/:date/:metricVal/:media/:desc', api.uploadProgress);
 app.get('/populate', api.populateDB);
 app.post('/login', api.login);
-api.post('/register', api.login);
+app.post('/register', api.login);
 
 var port = Number(process.env.PORT || 5000);
 app.listen(port, function() {

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feed</title>
+</head>
+<body>
+  <div id="content">
+  </div>
+</body>
+<script type='text/javascript' src="dist/js/jquery.min.js"></script>
+<script type="text/javascript">
+  $.ajax({
+    url: '/showAllUsers',
+    method: 'GET',
+  })
+    .success(function(response){
+      console.log(response);
+      var domStr = '';
+      for ( element in response ){
+        domStr += "<article>";
+        domStr += "<h1>" + response[element].user.username + "</h2>";
+        domStr += "</article>";
+      }
+      $('#content').html(domStr);
+    });
+</script>
+</html>
+
